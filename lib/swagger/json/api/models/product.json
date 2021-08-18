@@ -1,0 +1,19 @@
+{
+  "Product": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "integer",
+        "format": "int20"
+      },
+      "category_id": {
+        "type": "integer",
+        "format": "int20"
+      },
+      "name": {
+        "type": "string"
+      }
+    },
+    "description": "A Product object."
+  }
+}

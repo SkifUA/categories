@@ -1,0 +1,80 @@
+{
+  "/categories": {
+    "get": {
+      "tags": [
+        "categories"
+      ],
+      "summary": "Get list of categories",
+      "description": "List of categories",
+      "operationId": "categories",
+      "consumes": "multipart/form-data",
+      "parameters": [],
+      "responses": {
+        "200": {
+          "description": "successful operation",
+          "schema": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/Category"
+            }
+          }
+        },
+        "422": {
+          "description": "Unprocessable Entity"
+        }
+      }
+    }
+  },
+  "/categories/{Id}/products": {
+    "get": {
+      "tags": [
+        "categories"
+      ],
+      "summary": "Get list of Category's Products",
+      "description": "List of Category's Products",
+      "operationId": "categoryProducts",
+      "parameters": [
+        {
+          "name": "Id",
+          "in": "path",
+          "description": "Category Id",
+          "required": true,
+          "type": "integer"
+        },
+        {
+          "name": "page",
+          "in": "query",
+          "description": "Page",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "name": "name_order",
+          "in": "query",
+          "description": "Name Order",
+          "enum": [
+            "asc",
+            "desc"
+          ],
+          "default": "asc",
+          "required": false,
+          "type": "string"
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "successful operation",
+          "schema": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/Product"
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity"
+          }
+        }
+      }
+    }
+  }
+}
