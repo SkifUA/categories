@@ -16,8 +16,6 @@
 * `rails db:migration`
 * `rails db:seed`
 
-
-
 ## Run tests
 
 * `rspec`
@@ -25,9 +23,10 @@
 ## Swagger
 
 use via https://petstore.swagger.io/
-input to field 'Explore' link to json configuration builder <base_url>/swagger
+input to field 'Explore' link to json configuration builder `https://categories-valerii.herokuapp.com/swagger`
 
 ## Description
+* base url `https://categories-valerii.herokuapp.com`
 
 * get /categories - getting all Categories with deep children Categories and Products including children Products
 
