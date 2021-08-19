@@ -10,7 +10,7 @@
 ## Install
  
 * `git clone <repo url>`
-* `cd category/`
+* `cd categories/`
 * `bundle install`
 * `rails db:create`
 * `rails db:migration`
